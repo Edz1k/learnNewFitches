@@ -1,9 +1,21 @@
 import { defineStore } from 'pinia'
+import type { Product } from '~/types/productTypes'
 
-// Вы можете называть возвращаемое значение defineStore() как угодно,
-// но лучше всего использовать имя хранилища и окружить его `use`
-// и `Store` (например, `useUserStore`, `useCartStore`, `useProductStore`)
-// первый аргумент - это уникальный id хранилища в вашем приложении.
 export const useProductStore = defineStore('products', () => {
+  const productList = ref<Product[]>([])
+  async function getAllProducts() {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products')
+      const data = await response.json()
+      productList.value = data
+    }
+    catch (err) {
+      throw new Error(String(err))
+    }
+  }
 
+  return {
+    productList,
+    getAllProducts,
+  }
 })
