@@ -12,7 +12,7 @@ function setSelected(id: number) {
 </script>
 
 <template>
-  <div class="flex items-center justify-between border-b p-4">
+  <div class="sticky top-0 flex items-center justify-between border-b bg-white p-4 dark:bg-black">
     <div class="w-1/9">
       <img src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg" class="h-10 rounded-xl">
     </div>

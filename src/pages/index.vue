@@ -1,36 +1,32 @@
 <script setup lang="ts">
-import { useProductStore } from '~/stores/product'
+import { useCarStore } from '~/composables/useCars'
 
 defineOptions({
   name: 'IndexPage',
 })
 
-const store = useProductStore()
+const { getAllCars, cars, deleteCarbyId } = useCarStore()
+
 onMounted(async () => {
-  await store.getAllProducts()
+  await getAllCars()
 })
-const products = computed<any[]>(() => store.productList)
 </script>
 
 <template>
-  <div class="m-auto mt-15 container">
-    <div v-if="products.length > 0" class="flex flex-wrap">
-      <CardComponent v-for="product in products" :key="product.id">
-        <template #header>
-          <h1 class="text-xl font-bold">
-            {{ product.id }}
-          </h1>
-        </template>
-        <template #body>
-          <p>{{ product.description }}</p>
-        </template>
-        <template #footer>
-          <p>{{ product.price }}</p>
-        </template>
-      </CardComponent>
-    </div>
-    <div v-else class="text-center text-gray-500">
-      Загрузка данных...
-    </div>
+  <div v-for="car in cars" :key="car.id">
+    <CardComponent>
+      <template #header>
+        <img :src="car.image">
+      </template>
+      <template #body>
+        <p>{{ car.model }}</p>
+        <p>{{ car.year }}</p>
+      </template>
+      <template #footer>
+        <button @click="deleteCarbyId(car.firebaseId)">
+          Delete
+        </button>
+      </template>
+    </CardComponent>
   </div>
 </template>
