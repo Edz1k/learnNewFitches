@@ -1,8 +1,9 @@
 export interface Car {
   firebaseId: string
-  id: number
+  id: string
   model: string
   image: string
   year: string
   price: string
+  path: string
 }
