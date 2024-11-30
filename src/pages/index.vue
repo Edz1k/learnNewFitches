@@ -24,7 +24,7 @@ onMounted(async () => {
       </template>
       <template #footer>
         <div class="flex justify-center">
-          <router-link :to="`/${car.firebaseId}`" class="w-1/2 rounded-lg bg-orange p-2 text-center text-white">
+          <router-link :to="`/cars/${car.firebaseId}`" class="w-1/2 rounded-lg bg-orange p-2 text-center text-white">
             Заказать
           </router-link>
         </div>
