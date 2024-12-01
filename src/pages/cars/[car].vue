@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useCarStore } from '~/composables/useCars'
-import type { Car } from '~/types/cars'
+import { useCarStore } from '@/composables/useCars'
+import type { Car } from '@/types/cars'
 
 const router = useRouter()
 

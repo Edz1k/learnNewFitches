@@ -1,6 +1,6 @@
+import { db } from '@/firebase'
 import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore'
-import { db } from '~/firebase'
-import type { Car } from '~/types/cars'
+import type { Car } from '@/types/cars'
 
 const cars = ref<Car[]>([])
 
