@@ -20,7 +20,7 @@ onMounted(async () => {
       </template>
       <template #body>
         <p>{{ car.model }}</p>
-        <p>{{ car.year }}</p>
+        <p>{{ car.manufactureYear }}</p>
       </template>
       <template #footer>
         <div class="flex justify-center">

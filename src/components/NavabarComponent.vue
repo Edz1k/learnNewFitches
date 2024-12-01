@@ -12,14 +12,14 @@ function setSelected(id: number) {
 </script>
 
 <template>
-  <div class="sticky top-0 flex items-center justify-between border-b bg-white p-4 dark:bg-black">
+  <div class="sticky top-0 z-20 flex items-center justify-between border-b bg-[#111111] p-4 dark:bg-black">
     <div class="w-1/9">
-      <img src="https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg" class="h-10 rounded-xl">
+      <img src="/src/assets/logo.png" class="h-10 rounded-xl">
     </div>
     <div class="w-1/2">
       <ul class="flex justify-between">
         <li v-for="item in menuItems" :key="item.link" @click="setSelected(item.id)">
-          <router-link :to="item.link" :class="selected === item.id ? 'text-grey dark:text-white' : 'text-gray'" class="transition duration-300 hover:text-black dark:hover:text-blue-2">
+          <router-link :to="item.link" :class="selected === item.id ? 'text-white dark:text-white' : 'text-coolgrey'">
             {{ item.title }}
           </router-link>
         </li>
