@@ -5,5 +5,9 @@ defineOptions({
 </script>
 
 <template>
-  <div>sdasda</div>
+  <div class="m-auto container">
+    <div>
+      dasdas
+    </div>
+  </div>
 </template>
