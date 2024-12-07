@@ -27,9 +27,9 @@ onMounted(async () => {
     </p>
     <div class="relative flex flex-col items-center">
       <h1 class="absolute top-12 text-4xl drop-shadow-2xl drop-shadow-color-white">
-        BMW M5 F10
+        {{ car.model }}
       </h1>
-      <img :src="car.image" class="z-10 h-64 w-full object-cover">
+      <img :src="car.image" class="z-10 h-40 w-full object-cover">
     </div>
     <p>{{ car.model }}</p>
     <p>{{ car.manufactureYear }}</p>

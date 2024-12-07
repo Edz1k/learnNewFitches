@@ -1,34 +1,44 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
+
 const menuItems = ref([
-  { title: 'Рабочая', link: '/', id: 1 },
-  { title: 'Домашняя', link: '/home', id: 2 },
-  { title: 'Вечерняя', link: '/evening', id: 3 },
-  { title: 'Просто', link: '/simple', id: 4 },
+  { title: 'Главная', link: '/' },
+  { title: 'Автопарк', link: '/autopark' },
+  { title: 'Условия', link: '/details' },
+  { title: 'Отзывы', link: '/reviews' },
 ])
-const selected = ref<number | null>(1)
-function setSelected(id: number) {
-  selected.value = id
-}
+
+const route = useRoute()
 </script>
 
 <template>
-  <div class="sticky top-0 z-20 flex items-center justify-between border-b bg-[#111111] p-4 dark:bg-black">
-    <div class="w-1/9">
-      <img src="/src/assets/logo.png" class="h-10 rounded-xl">
+  <div class="relative sticky top-0 z-20 flex items-center justify-between border-b bg-[#111111] p-4 dark:bg-black">
+    <!-- Логотип -->
+    <div class="h-10 w-[16%]">
+      <img src="/src/assets/logo.png" class="h-full w-full object-cover" alt="Логотип">
     </div>
-    <div class="w-1/2">
-      <ul class="flex justify-between">
-        <li v-for="item in menuItems" :key="item.link" @click="setSelected(item.id)">
-          <router-link :to="item.link" :class="selected === item.id ? 'text-white dark:text-white' : 'text-coolgrey'">
+
+    <!-- Меню -->
+    <nav class="absolute left-[27%] w-1/2">
+      <ul class="w-full flex justify-between">
+        <li
+          v-for="item in menuItems"
+          :key="item.link"
+          class="relative"
+        >
+          <router-link
+            :to="item.link"
+            class="px-4 py-2 transition-500"
+            :class="{
+              'text-white border-b-2 border-orange-macan': route.path === item.link,
+              'text-gray-500': route.path !== item.link,
+            }"
+          >
             {{ item.title }}
           </router-link>
         </li>
       </ul>
-    </div>
-    <div>
-      <button icon-btn @click="toggleDark()">
-        <div i-carbon-sun dark:i-carbon-moon class="text-xl" />
-      </button>
-    </div>
+    </nav>
+    <ContactComponent />
   </div>
 </template>

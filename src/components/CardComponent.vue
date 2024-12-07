@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="ml-10 mt-5 w-[30%] border rounded-xl bg-white text-black">
+  <div class="bg-white text-black">
     <div>
       <slot name="header" />
     </div>
