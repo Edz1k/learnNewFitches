@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
@@ -7,11 +6,8 @@
     <div>
       <slot name="header" />
     </div>
-    <div class="min-h-[30vh] border-t p-7">
+    <div class="min-h-[30vh] p-7">
       <slot name="body" />
-    </div>
-    <div class="border-t p-7">
-      <slot name="footer" />
     </div>
   </div>
 </template>

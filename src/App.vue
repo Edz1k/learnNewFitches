@@ -1,5 +1,5 @@
 <template>
-  <main font-sans text="gray-700 dark:gray-200">
+  <main font-sans text="gray-200 dark:gray-200">
     <NavabarComponent />
     <RouterView />
   </main>
