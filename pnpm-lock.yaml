@@ -17,6 +17,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      embla-carousel-vue:
+        specifier: ^8.5.1
+        version: 8.5.1(vue@3.5.13(typescript@5.7.2))
       firebase:
         specifier: ^11.0.2
         version: 11.0.2
@@ -48,12 +51,18 @@ importers:
       '@iconify-json/carbon':
         specifier: ^1.2.4
         version: 1.2.4
+      '@iconify-json/fluent':
+        specifier: ^1.2.11
+        version: 1.2.11
       '@iconify-json/ic':
         specifier: ^1.2.1
         version: 1.2.1
       '@iconify-json/material-symbols':
         specifier: ^1.2.12
         version: 1.2.12
+      '@iconify-json/mdi':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -962,11 +971,17 @@ packages:
   '@iconify-json/carbon@1.2.4':
     resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
 
+  '@iconify-json/fluent@1.2.11':
+    resolution: {integrity: sha512-cIaUZiNoEFF22tldJOh2mcwk/d6C+kpo5R4xhgLAy6HH61NaY4Lqktje4qK2nqzQqAvYB2NpDjJnmBQw6zUlJw==}
+
   '@iconify-json/ic@1.2.1':
     resolution: {integrity: sha512-UjL/bjJP/T5EV881+hTzcfTKVo0KEUjhnMiJcLtPzNgPtU2KZZmRx8BSKKR61H4CN/5FTEbyawGyG0aEt3SwGQ==}
 
   '@iconify-json/material-symbols@1.2.12':
     resolution: {integrity: sha512-2p2T13Kccy7R2HNbdiVsIcHxjp4s9a+iKlfbtt29hldG1pVNaPIlMALNA9bjdEwPjwsVFe06INCbjCRc68JysQ==}
+
+  '@iconify-json/mdi@1.2.2':
+    resolution: {integrity: sha512-84aznJXzfGdbOXGe8xB7E5uNAb7Yo5IABwTgq2X3kczb819qZeS9eL31bTVn7wJdCLK5ieaoUc2GTS3QYIkJ6g==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2131,6 +2146,19 @@ packages:
 
   electron-to-chromium@1.5.72:
     resolution: {integrity: sha512-ZpSAUOZ2Izby7qnZluSrAlGgGQzucmFbN0n64dYzocYxnxV5ufurpj3VgEe4cUp7ir9LmeLxNYo8bVnlM8bQHw==}
+
+  embla-carousel-reactive-utils@8.5.1:
+    resolution: {integrity: sha512-n7VSoGIiiDIc4MfXF3ZRTO59KDp820QDuyBDGlt5/65+lumPHxX2JLz0EZ23hZ4eg4vZGUXwMkYv02fw2JVo/A==}
+    peerDependencies:
+      embla-carousel: 8.5.1
+
+  embla-carousel-vue@8.5.1:
+    resolution: {integrity: sha512-DdWsmiketOzAn6D42A3AQmJ/nndt4ryjBX/RMupl97gJf6oIec5q8Sc3cKuRhCXlLE0RZ7jz3ZlHW7xrT+BJDg==}
+    peerDependencies:
+      vue: ^3.2.37
+
+  embla-carousel@8.5.1:
+    resolution: {integrity: sha512-JUb5+FOHobSiWQ2EJNaueCNT/cQU9L6XWBbWmorWPQT9bkbk+fhsuLr8wWrzXKagO3oWszBO7MSx+GfaRk4E6A==}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -4971,11 +4999,19 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/fluent@1.2.11':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/ic@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 
   '@iconify-json/material-symbols@1.2.12':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -6386,6 +6422,18 @@ snapshots:
       semver: 7.6.3
 
   electron-to-chromium@1.5.72: {}
+
+  embla-carousel-reactive-utils@8.5.1(embla-carousel@8.5.1):
+    dependencies:
+      embla-carousel: 8.5.1
+
+  embla-carousel-vue@8.5.1(vue@3.5.13(typescript@5.7.2)):
+    dependencies:
+      embla-carousel: 8.5.1
+      embla-carousel-reactive-utils: 8.5.1(embla-carousel@8.5.1)
+      vue: 3.5.13(typescript@5.7.2)
+
+  embla-carousel@8.5.1: {}
 
   emoji-regex@10.4.0: {}
 

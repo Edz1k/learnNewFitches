@@ -6,8 +6,11 @@
     <div>
       <slot name="header" />
     </div>
-    <div class="min-h-[30vh] p-7">
+    <div class="min-h-70 flex items-center">
       <slot name="body" />
+    </div>
+    <div>
+      <slot name="footer" />
     </div>
   </div>
 </template>

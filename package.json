@@ -16,6 +16,7 @@
     "@vueuse/core": "^11.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-vue": "^8.5.1",
     "firebase": "^11.0.2",
     "lucide-vue-next": "^0.468.0",
     "pinia": "^2.3.0",
@@ -28,8 +29,10 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
     "@iconify-json/carbon": "^1.2.4",
+    "@iconify-json/fluent": "^1.2.11",
     "@iconify-json/ic": "^1.2.1",
     "@iconify-json/material-symbols": "^1.2.12",
+    "@iconify-json/mdi": "^1.2.2",
     "@types/node": "^22.10.2",
     "@unocss/eslint-config": "^0.62.4",
     "@unocss/eslint-plugin": "^0.62.4",

@@ -20,7 +20,8 @@ const router = useRouter()
           Катайтесь на люксовых автомобилях по самым выгодным ценам в Алматы
         </p>
         <div class="mt-5 w-full flex justify-between">
-          <button class="w-[48%] border border-orange-macan rounded-lg bg-orange-macan px-5 py-3 transition-500 hover:bg-[#121212]" @click="router.push('/autopark')">
+          <button class="w-[48%] flex items-center justify-center border border-orange-macan rounded-lg bg-orange-macan px-5 py-3 transition-500 hover:bg-[#121212]" @click="router.push('/autopark')">
+            <div class="i-mdi:car-search mr-2" />
             Посмотрет автопарк
           </button>
           <button class="w-[48%] flex items-center justify-center border border-orange-macan rounded-lg px-5 py-3 transition-500 hover:bg-orange-macan">
@@ -79,5 +80,6 @@ const router = useRouter()
         </template>
       </ReccomendCardComponent>
     </div>
+    <AccordionQA class="mb-50 mt-10" />
   </div>
 </template>
